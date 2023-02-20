@@ -3,8 +3,8 @@ import { Editor, TinyMCE } from 'tinymce';
 declare const tinymce: TinyMCE;
 
 const setup = (editor: Editor): void => {
-  const marignTopVal: string = editor.getParam('margin_top', '0px 8px 16px 32px 40px')
-  const marginBottomVal: string = editor.getParam('margin_bottom', '0px 8px 16px 32px 40px')
+  const marignTopVal: string = editor.getParam('margin_top_formats', '0px 8px 16px 24px 32px 40px 48px')
+  const marginBottomVal: string = editor.getParam('margin_bottom_formats', '0px 8px 16px 24px 32px 40px 48px')
   editor.on('init', () => {
     editor.formatter.register({
       'margin-top': {
